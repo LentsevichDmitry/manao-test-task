@@ -1,0 +1,23 @@
+
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: red;
+    width: 100%;
+    text-align: end;
+}
+
+form {
+    width: 400px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-top: 1em;
+}

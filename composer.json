@@ -1,0 +1,20 @@
+{
+    "name": "kazut/auth-manao",
+    "description": "Manao test task",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "twig/twig": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "AuthManao\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitriy",
+            "email": "colossalkratos@gmail.com"
+        }
+    ]
+}

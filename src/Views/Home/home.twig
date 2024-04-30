@@ -1,0 +1,56 @@
+{% extends 'base.twig' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    {% if name %}
+        Hello {{ name }}
+        <button id="sign-out">Sign out</button>
+    {% else %}
+        <form action="/register" id="register-form">
+            <h1>Registration form</h1>
+            <div class="form-item">
+                <label for="login">Enter your login</label>
+                <input type="text" name="login" id="login">
+            </div>
+            <div class="error hidden" data-error="login"></div>
+            <div class="form-item">
+                <label for="password">Enter your password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="error hidden" data-error="password"></div>
+            <div class="form-item">
+                <label for="confirmPassword">Confirm your password</label>
+                <input type="password" name="confirm_password" id="confirm_password">
+            </div>
+            <div class="error hidden" data-error="confirm_password"></div>
+            <div class="form-item">
+                <label for="email">Enter your email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="error hidden" data-error="email"></div>
+            <div class="form-item">
+                <label for="name">Enter your name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="error hidden" data-error="name"></div>
+            <div>
+                <input type="submit" value="Registration">
+            </div>
+            <div class="error hidden" data-error="error"></div>
+        </form>
+
+        <div>
+            <button>
+                <a href="/auth">Sign In</a>
+            </button>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block scripts %}
+    {% if name %}
+        <script src="/public/assets/scripts/home.js"></script>
+    {% else %}
+        <script src="/public/assets/scripts/register.js"></script>
+        <link rel="stylesheet" href="/public/assets/styles/form.css"/>
+    {% endif %}
+{% endblock %}
+

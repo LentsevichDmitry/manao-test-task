@@ -1,0 +1,27 @@
+{% extends 'base.twig' %}
+{% block title %}Authentification Page{% endblock %}
+{% block content %}
+    <form action="/auth" id="auth-form">
+        <h1>Authentification</h1>
+        <div class="form-item">
+            <label for="login">Enter your login</label>
+            <input type="text" name="login" id = login>
+        </div>
+        <div class="error hidden" data-error="login"></div>
+        <div class="form-item">
+            <label for="password">Enter your password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div class="error hidden" data-error="password"></div>
+        <div>
+            <input type="submit" value="Sign In">
+        </div>
+        <div class="error hidden" data-error="error"></div>
+    </form>
+
+{% endblock %}
+{% block scripts %}
+    <script src="/public/assets/scripts/auth.js"></script>
+    <link rel="stylesheet" href="/public/assets/styles/form.css" />
+{% endblock %}
+

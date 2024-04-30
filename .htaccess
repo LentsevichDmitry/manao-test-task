@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Игнорирование папки public
+RewriteRule ^public($|/) - [L]
+
+# Перенаправление всего остального на index.php
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteRule ^(.*)$ /index.php [L]
