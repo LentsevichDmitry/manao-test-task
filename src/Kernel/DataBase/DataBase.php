@@ -3,7 +3,6 @@
 namespace AuthManao\Kernel\DataBase;
 
 use AuthManao\Kernel\HttpException\HTTPInternalServerException;
-use Exception;
 
 class DataBase
 {
