@@ -2,6 +2,7 @@
 
 namespace AuthManao\Kernel\DataBase;
 
+use AuthManao\Kernel\HttpException\HTTPInternalServerException;
 use Exception;
 
 class DataBase
@@ -15,7 +16,7 @@ class DataBase
         $this->fileName = $_SERVER['DOCUMENT_ROOT'] . '/' . $fileName;
 
         if (!file_exists($this->fileName)) {
-            throw new Exception($fileName . ' file not exists');
+            throw new HTTPInternalServerException($fileName . ' file not exists');
         }
 
         $this->data = json_decode(file_get_contents($this->fileName), true);
